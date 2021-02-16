@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "Jira link creator",
+    "version": "1.0",
+    "description": "Add links to jira ticket on github repo",
+    "content_scripts": [{
+        "matches": ["*://github.com/ArteGEIE*"],
+        "js": ["./build/home.js"]
+    }],
+    "icons": {
+        "192": "./public/logo192.png",
+        "512": "./public/logo512.png"
+    },
+    "browser_action": {
+        "default_icon": "./public/logo192.png",
+        "default_title": "Jira",
+        "default_popup": "./public/index.html"
+    }
+}
